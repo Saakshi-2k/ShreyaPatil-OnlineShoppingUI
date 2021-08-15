@@ -1,0 +1,64 @@
+<p>retailer-deletefunction works!</p>
+
+<!-- <table>
+    <tr>
+        <td>Enter Category <input type="text" [(ngModel)]="srchCat"><button (click)="searchByCat()">Search</button> </td>  </tr>
+    <tr>     
+        <td>Enter Price Range From <input type="text" [(ngModel)]="lowPrice"> To <input type="text" [(ngModel)]="highPrice">
+            <button (click)="searchByPrice()">Search</button> </td>        
+        </tr>  
+</table> -->
+<!-- <div>Enter Product Id <input type="text" [(ngModel)]="prodid"><button (click)="DeleteProd(107)">Delete</button> </div> -->
+<!-- {{DisplayBySupplier(4)}} -->
+<!-- {{DisplayBySupplier(3)}} -->
+<table class="compare-table">
+    <thead>
+        <th></th>
+        
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Brand</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Supplier</th>
+
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let p of prod">
+        <td id="first-border-style"><img src={{p.url}}><button id="button-style" (click)="DeleteProd(p.prodId)">Delete</button> </td>
+        <!-- <td id="first-border-style"><img src={{p.url}}><button id="button-style">  <a routerLink="retailerupdateproduct">Delete</a>
+        </button> </td> -->
+        <td>{{p.prodId}}</td>
+        <td>{{p.prodName}}</td>
+        <td>{{p.brand}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.pcategory}}</td>
+        <td>{{p.pdescription}}</td>
+        <td>{{p.supplierId}}</td>
+    </tr> 
+
+    </tbody>
+
+</table>
+
+<!-- <div><button (click)="DeleteProd(107)">Delete</button> </div> -->
+
+<!-- <div>
+    <table>
+        <thead style="color: blue;">
+            <th>Product ID</th>
+            <th> Product Name</th>
+            <th> Price</th>
+            <th> Category</th>
+        </thead>
+        <tr *ngFor="let p of prod">
+                <td> {{p.prodid}}</td>
+                <td> {{p.prodname}}</td>
+                <td> {{p.price}}</td>
+                <td> {{p.category}}</td>
+        </tr>
+        </table>
+    
+</div> -->
